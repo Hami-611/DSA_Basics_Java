@@ -1,0 +1,38 @@
+// To find character in a string
+
+public class Main {
+    public static void main(String[] args) {
+        // Input string
+        String name = "Learnings";
+        
+        // Target character to search for
+        char target = 'g';
+        
+        // Calling the search method and printing the result
+        System.out.println(search(name, target));
+    }
+
+    // Method to perform character search in a string
+    static boolean search(String name, char target) {
+        // Check if the string is empty
+        if (name.length() == 0) {
+            // If the string is empty, return false indicating that the target is not found
+            return false;
+        }
+
+        // Loop through each character in the string
+        for (int i = 0; i < name.length(); i++) {
+            // Get the current character in the string
+            char currentChar = name.charAt(i);
+
+            // Check if the current character is equal to the target character
+            if (target == currentChar) {
+                // If found, return true
+                return true;
+            }
+        }
+
+        // If the target character is not found, return false
+        return false;
+    }
+}
