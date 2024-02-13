@@ -1,6 +1,5 @@
 // Find element in a range in an array
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
+
 class Main {
     public static void main(String[] args) {
         int[] arr = {18, 24, 73, 94, 58};
