@@ -1,3 +1,6 @@
+// To check if an element is present in the array
+
+
 public class Main {
     public static void main(String[] args) {
         // Array of integers
