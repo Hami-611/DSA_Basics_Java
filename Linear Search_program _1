@@ -1,6 +1,5 @@
 // To check if an element is present in the array
 
-
 public class Main {
     public static void main(String[] args) {
         // Array of integers
@@ -25,14 +24,12 @@ public class Main {
         }
         
         // Loop through each element in the array
-        for (int index = 0; index < arr.length; index++) {
-            // Current element in the array
-            int element = arr[index];
+        for (int element: arr) {
             
             // Check if the current element is equal to the target element
             if (element == target) {
                 // If found, return the index of the target element
-                return index;
+                return element;
             }
         }
         
@@ -40,3 +37,4 @@ public class Main {
         return -1;
     }
 }
+
