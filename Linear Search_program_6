@@ -1,0 +1,31 @@
+// To find element in 2D Array
+
+import java.util.Arrays;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5},
+                {6, 7, 4, 9}
+        };
+        int target = 7;
+        int[] ans = search(arr, target);
+        System.out.println(Arrays.toString(ans));
+    }
+
+    // Method to search for a target in a 2D array
+    static int[] search(int[][] arr, int target) {
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if (arr[row][col] == target) {
+                    // Return the row and column indices in an array
+                    return new int[]{row, col};
+                }
+            }
+        }
+
+        // If the target is not found, return an array with -1 values
+        return new int[]{-1, -1};
+    }
+}
