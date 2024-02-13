@@ -1,0 +1,35 @@
+// Find element in a range in an array
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {18, 24, 73, 94, 58};
+        int target = 94;
+        System.out.println(numberInRange(arr, target, 1, 4));
+    }
+
+    // Method to find a number in a specified range in an array
+    static int numberInRange(int[] arr, int target, int start, int end) {
+        // Check if the array is empty
+        if (arr.length == 0) {
+            return -1;
+        }
+
+        // Ensure that start and end indices are within the array bounds
+        if (start < 0 || end >= arr.length || start > end) {
+            return -1;
+        }
+
+        for (int index = start; index <= end; index++) {
+            int element = arr[index];
+            
+            // Check if the current element is equal to the target
+            if (element == target) {
+                return index;
+            }
+        }
+
+        // If the target is not found in the specified range, return -1
+        return -1;
+    }
+}
