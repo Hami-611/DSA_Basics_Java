@@ -1,0 +1,29 @@
+// Linear Search in a string
+
+public class Main {
+    public static void main(String[] args) {
+        String name = "My First Code in Java ";
+        String target = "Java";
+        String result = linearSearch(name, target);
+        System.out.println(result);
+    }
+
+    static String linearSearch(String name, String target) {
+        if (name.length() == 0) {
+            return "Not present";
+        }
+
+        // Split the string into words
+        String[] words = name.split(" ");
+
+        for (String word : words) {
+            // Use equals method to check content equality
+            if (word.equals(target)) {
+                return "Found: " + word;
+            }
+        }
+
+        return "Not present";
+    }
+}
+
