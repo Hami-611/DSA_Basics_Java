@@ -1,4 +1,4 @@
-// Linear Search in a string
+// Linear Search to find substring in a string
 
 public class Main {
     public static void main(String[] args) {
