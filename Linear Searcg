@@ -1,0 +1,39 @@
+public class Main {
+    public static void main(String[] args) {
+        // Array of integers
+        int[] arr = {24, 278, 4825, 346, 54, 68};
+        
+        // Target element to search for
+        int target = 346;
+        
+        // Calling linearSearch method to find the target element in the array
+        int ans = linearSearch(arr, target);
+        
+        // Printing the result
+        System.out.println(ans);
+    }
+
+    // Method to perform linear search in an array
+    static int linearSearch(int[] arr, int target) {
+        // Check if the array is empty
+        if (arr.length == 0) {
+            // If the array is empty, return -1 indicating that the target is not found
+            return -1;
+        }
+        
+        // Loop through each element in the array
+        for (int index = 0; index < arr.length; index++) {
+            // Current element in the array
+            int element = arr[index];
+            
+            // Check if the current element is equal to the target element
+            if (element == target) {
+                // If found, return the index of the target element
+                return index;
+            }
+        }
+        
+        // If the target element is not found, return -1
+        return -1;
+    }
+}
